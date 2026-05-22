@@ -247,40 +247,32 @@
   <section class="hero">
     <div class="hero-bg"></div>
     <div class="hero-accent"></div>
-    <!-- hero-layout wraps both columns on desktop; on mobile it's ignored (no grid) -->
-    <div class="hero-layout">
-      <div class="hero-inner">
-        <img src="logo.png" alt="Truecraft Contracting" style="height: 80px; width: auto; margin-bottom: 2rem; opacity: 0; animation: fadeUp 0.8s ease forwards 0.1s;" />
-        <p class="hero-eyebrow">Tri-Cities, Tennessee</p>
-        <h1 class="hero-title">Built <span class="highlight">Right.</span> Built to Last.</h1>
-        <p class="hero-tagline">Truecraft Contracting delivers handyman services, remodeling, custom carpentry, and outdoor structures with the craftsmanship your home deserves.</p>
-        <div class="hero-actions">
-          <a href="#contact" class="btn-primary">Get a Free Quote</a>
-          <a href="#services" class="btn-secondary">Our Services</a>
-        </div>
-        <div class="hero-stats">
-          <div><div class="stat-number">100%</div><div class="stat-label">Licensed &amp; Insured</div></div>
-          <div><div class="stat-number">10+</div><div class="stat-label">Communities Served</div></div>
-          <div><div class="stat-number">0</div><div class="stat-label">Shortcuts Taken</div></div>
-        </div>
-      </div>
-      <!-- RIGHT SIDE — desktop only, hidden on mobile via CSS -->
-      <div class="hero-right">
-        <img class="hero-right-img" src="IMG_4896.jpeg" alt="Completed home remodel by Truecraft Contracting" style="object-position: center 40%;" />
-        <div class="hero-right-badge">
-          <div class="hero-right-badge-stat">
-            <div class="num">TN</div>
-            <div class="lbl">Licensed</div>
+    <!-- hero layout: logo above grid, then two columns -->
+    <div style="position:relative; z-index:1; width:100%;">
+      <img src="logo.png" alt="Truecraft Contracting" style="height: 80px; width: auto; margin-bottom: 1.5rem; opacity: 0; animation: fadeUp 0.8s ease forwards 0.1s;" />
+      <div class="hero-layout">
+        <div class="hero-inner">
+          <p class="hero-eyebrow">Tri-Cities, Tennessee</p>
+          <h1 class="hero-title">Built <span class="highlight">Right.</span> Built to Last.</h1>
+          <p class="hero-tagline">Truecraft Contracting delivers handyman services, remodeling, custom carpentry, and outdoor structures with the craftsmanship your home deserves.</p>
+          <div class="hero-actions">
+            <a href="#contact" class="btn-primary">Get a Free Quote</a>
+            <a href="#services" class="btn-secondary">Our Services</a>
           </div>
-          <div class="hero-right-badge-divider"></div>
-          <div class="hero-right-badge-stat">
-            <div class="num">GL</div>
-            <div class="lbl">Insured</div>
+          <div class="hero-stats">
+            <div><div class="stat-number">100%</div><div class="stat-label">Licensed &amp; Insured</div></div>
+            <div><div class="stat-number">10+</div><div class="stat-label">Communities Served</div></div>
+            <div><div class="stat-number">0</div><div class="stat-label">Shortcuts Taken</div></div>
           </div>
-          <div class="hero-right-badge-divider"></div>
-          <div class="hero-right-badge-stat">
-            <div class="num">5★</div>
-            <div class="lbl">Rated</div>
+        </div>
+        <div class="hero-right">
+          <img class="hero-right-img" src="IMG_4896.jpeg" alt="Completed home remodel by Truecraft Contracting" style="object-position: center 40%;" />
+          <div class="hero-right-badge">
+            <div class="hero-right-badge-stat"><div class="num">TN</div><div class="lbl">Licensed</div></div>
+            <div class="hero-right-badge-divider"></div>
+            <div class="hero-right-badge-stat"><div class="num">GL</div><div class="lbl">Insured</div></div>
+            <div class="hero-right-badge-divider"></div>
+            <div class="hero-right-badge-stat"><div class="num">5★</div><div class="lbl">Rated</div></div>
           </div>
         </div>
       </div>
