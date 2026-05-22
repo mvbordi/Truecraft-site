@@ -73,7 +73,7 @@
     .hero-title .highlight { color: var(--gold); display: block; }
     .hero-tagline { font-size: 1.05rem; font-weight: 500; color: var(--gray); max-width: 440px; line-height: 1.7; margin-top: 1.8rem; opacity: 0; animation: fadeUp 0.8s ease forwards 0.6s; }
     .hero-actions { display: flex; gap: 1.2rem; margin-top: 2.5rem; opacity: 0; animation: fadeUp 0.8s ease forwards 0.8s; }
-    .hero-stats { display: flex; gap: 3rem; margin-top: 4rem; padding-top: 3rem; border-top: 1px solid rgba(255,255,255,0.07); opacity: 0; animation: fadeUp 0.8s ease forwards 1s; }
+    .hero-stats { display: flex; gap: 3rem; margin-top: 4rem; padding-top: 3rem; padding-bottom: 3rem; border-top: 1px solid rgba(255,255,255,0.07); opacity: 0; animation: fadeUp 0.8s ease forwards 1s; }
 
     /* ── HERO RIGHT PANEL (desktop only) ── */
     .hero-right { display: none; }
@@ -194,7 +194,8 @@
         gap: 0;
         opacity: 0;
         animation: fadeUp 0.9s ease forwards 0.5s;
-        align-self: center;
+        align-self: flex-start;
+        padding-top: 6rem;
       }
       .hero-right-img {
         width: 100%;
