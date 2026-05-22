@@ -95,11 +95,12 @@
 .portfolio { padding: 8rem 3rem; background: var(--black); }
 .portfolio-project { margin-bottom: 5rem; }
 .portfolio-label { font-family: 'Barlow Condensed', sans-serif; font-size: 0.85rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; }
+.portfolio-label::before { display: none; }
 .portfolio-grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; }
 .portfolio-grid-tall { display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; }
 .portfolio-img-wrap { position: relative; overflow: hidden; }
 .portfolio-img-wrap img { width: 100%; height: 380px; object-fit: cover; display: block; transition: transform 0.4s ease; }
-.portfolio-img-wrap.tall img { height: 520px; object-position: center top; }
+.portfolio-img-wrap.tall img { height: 520px; object-position: center center; }
 .portfolio-img-wrap:hover img { transform: scale(1.03); }
 .before-after-tag { position: absolute; top: 1rem; left: 1rem; background: rgba(10,10,10,0.8); color: var(--light-gray); font-family: 'Barlow Condensed', sans-serif; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; padding: 0.3rem 0.8rem; z-index: 2; }
 .before-after-tag.after { background: var(--gold); color: var(--black); }
