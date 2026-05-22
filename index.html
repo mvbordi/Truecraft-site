@@ -52,6 +52,8 @@
     :root { --black: #0a0a0a; --charcoal: #141414; --steel: #1e1e1e; --gold: #c9a84c; --gold-light: #e8c870; --white: #f5f2ee; --gray: #888; --light-gray: #ccc; }
     html { scroll-behavior: smooth; }
     body { background: var(--black); color: var(--white); font-family: 'Barlow', sans-serif; overflow-x: hidden; padding-bottom: 80px; }
+
+    /* ── NAV ── */
     nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 1.2rem 3rem; background: rgba(10,10,10,0.92); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(201,168,76,0.15); }
     .nav-logo img { height: 70px; width: auto; }
     .nav-links { display: flex; gap: 2.5rem; list-style: none; }
@@ -59,22 +61,34 @@
     .nav-links a:hover { color: var(--gold); }
     .nav-cta { background: var(--gold); color: var(--black) !important; padding: 0.5rem 1.4rem; font-weight: 700 !important; }
     .nav-cta:hover { background: var(--gold-light) !important; }
-    .hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; padding: 0 3rem; position: relative; overflow: hidden; }
+
+    /* ── HERO ── */
+    .hero { min-height: 100vh; display: flex; align-items: center; padding: 0 3rem; position: relative; overflow: hidden; }
     .hero-bg { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(201,168,76,0.06) 0%, transparent 50%); }
     .hero-accent { position: absolute; right: -100px; top: 50%; transform: translateY(-50%); width: 600px; height: 600px; border: 1px solid rgba(201,168,76,0.08); border-radius: 50%; pointer-events: none; }
+    .hero-inner { position: relative; width: 100%; max-width: 680px; }
     .hero-eyebrow { font-family: 'Barlow Condensed', sans-serif; font-size: 0.85rem; font-weight: 600; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.5rem; opacity: 0; animation: fadeUp 0.8s ease forwards 0.2s; }
     .hero-eyebrow::before { content: ''; display: inline-block; width: 40px; height: 2px; background: var(--gold); vertical-align: middle; margin-right: 1rem; }
-    .hero-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(5rem, 12vw, 11rem); line-height: 0.9; letter-spacing: 0.02em; color: var(--white); opacity: 0; animation: fadeUp 0.8s ease forwards 0.4s; }
+    .hero-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(5rem, 10vw, 10rem); line-height: 0.9; letter-spacing: 0.02em; color: var(--white); opacity: 0; animation: fadeUp 0.8s ease forwards 0.4s; }
     .hero-title .highlight { color: var(--gold); display: block; }
-    .hero-tagline { font-size: 1.15rem; font-weight: 500; color: var(--gray); max-width: 480px; line-height: 1.7; margin-top: 1.8rem; opacity: 0; animation: fadeUp 0.8s ease forwards 0.6s; }
+    .hero-tagline { font-size: 1.05rem; font-weight: 500; color: var(--gray); max-width: 440px; line-height: 1.7; margin-top: 1.8rem; opacity: 0; animation: fadeUp 0.8s ease forwards 0.6s; }
     .hero-actions { display: flex; gap: 1.2rem; margin-top: 2.5rem; opacity: 0; animation: fadeUp 0.8s ease forwards 0.8s; }
+    .hero-stats { display: flex; gap: 3rem; margin-top: 4rem; padding-top: 3rem; border-top: 1px solid rgba(255,255,255,0.07); opacity: 0; animation: fadeUp 0.8s ease forwards 1s; }
+
+    /* ── HERO RIGHT PANEL (desktop only) ── */
+    .hero-right { display: none; }
+
+    /* ── BUTTONS ── */
     .btn-primary { background: var(--gold); color: var(--black); padding: 1rem 2.4rem; font-family: 'Barlow Condensed', sans-serif; font-size: 1rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; text-decoration: none; display: inline-block; transition: background 0.2s, transform 0.2s; }
     .btn-primary:hover { background: var(--gold-light); transform: translateY(-2px); }
     .btn-secondary { border: 1px solid rgba(201,168,76,0.4); color: var(--gold); padding: 1rem 2.4rem; font-family: 'Barlow Condensed', sans-serif; font-size: 1rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; text-decoration: none; display: inline-block; transition: border-color 0.2s, background 0.2s, transform 0.2s; }
     .btn-secondary:hover { border-color: var(--gold); background: rgba(201,168,76,0.08); transform: translateY(-2px); }
-    .hero-stats { display: flex; gap: 3rem; margin-top: 5rem; padding-top: 3.5rem; padding-bottom: 3rem; border-top: 1px solid rgba(255,255,255,0.07); opacity: 0; animation: fadeUp 0.8s ease forwards 1s; }
+
+    /* ── STATS ── */
     .stat-number { font-family: 'Bebas Neue', sans-serif; font-size: 2.8rem; color: var(--gold); line-height: 1; }
     .stat-label { font-size: 0.8rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gray); margin-top: 0.3rem; }
+
+    /* ── SERVICES ── */
     .services { padding: 8rem 3rem; background: var(--charcoal); position: relative; }
     .section-label { font-family: 'Barlow Condensed', sans-serif; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; }
     .section-label::before { content: ''; display: inline-block; width: 30px; height: 2px; background: var(--gold); vertical-align: middle; margin-right: 0.8rem; }
@@ -87,6 +101,8 @@
     .service-icon { font-size: 2.5rem; margin-bottom: 1.5rem; display: block; }
     .service-name { font-family: 'Bebas Neue', sans-serif; font-size: 1.8rem; letter-spacing: 0.05em; color: var(--white); margin-bottom: 0.8rem; }
     .service-desc { font-size: 0.95rem; color: var(--gray); line-height: 1.7; }
+
+    /* ── WHY ── */
     .why { padding: 8rem 3rem 4rem 3rem; display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center; }
     .why-text .section-title { margin-bottom: 1.5rem; }
     .why-body { font-size: 1.05rem; color: var(--gray); line-height: 1.8; margin-bottom: 2.5rem; }
@@ -95,11 +111,14 @@
     .feature-check { width: 22px; height: 22px; background: var(--gold); color: var(--black); display: flex; align-items: center; justify-content: center; font-size: 0.75rem; font-weight: 700; flex-shrink: 0; margin-top: 2px; }
     .feature-text { font-size: 0.95rem; color: var(--light-gray); line-height: 1.5; }
     .why-visual { position: relative; }
+    .why-visual img { width: 100%; height: 500px; object-fit: cover; object-position: center top; display: block; margin-bottom: 1.5rem; }
     .why-box { background: var(--steel); border: 1px solid rgba(201,168,76,0.15); padding: 1.8rem; position: relative; }
     .why-box::before { content: ''; position: absolute; top: -8px; left: -8px; right: 8px; bottom: 8px; border: 1px solid rgba(201,168,76,0.08); pointer-events: none; }
     .quote-mark { font-family: 'Bebas Neue', sans-serif; font-size: 4rem; color: rgba(201,168,76,0.15); line-height: 0.8; margin-bottom: 0.5rem; }
     .quote-text { font-family: 'Barlow Condensed', sans-serif; font-size: 1.6rem; font-weight: 600; line-height: 1.4; color: var(--white); margin-bottom: 1.5rem; }
     .quote-author { font-size: 0.85rem; color: var(--gold); letter-spacing: 0.1em; text-transform: uppercase; font-weight: 600; }
+
+    /* ── PORTFOLIO ── */
     .portfolio { padding: 8rem 3.5rem; background: var(--black); }
     .portfolio-section-label { font-family: 'Barlow Condensed', sans-serif; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; }
     .portfolio-project { margin-bottom: 5rem; }
@@ -107,11 +126,13 @@
     .portfolio-grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; }
     .portfolio-grid-tall { display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; }
     .portfolio-img-wrap { position: relative; overflow: hidden; }
-    .portfolio-img-wrap img { width: 100%; height: 380px; object-fit: cover; display: block; transition: transform 0.4s ease; }
+    .portfolio-img-wrap img { width: 100%; height: 460px; object-fit: cover; object-position: center center; display: block; transition: transform 0.4s ease; }
     .portfolio-img-wrap.tall img { height: 520px; object-position: center center; }
     .portfolio-img-wrap:hover img { transform: scale(1.03); }
     .before-after-tag { position: absolute; top: 1rem; left: 1rem; background: rgba(10,10,10,0.8); color: var(--light-gray); font-family: 'Barlow Condensed', sans-serif; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; padding: 0.3rem 0.8rem; z-index: 2; }
     .before-after-tag.after { background: var(--gold); color: var(--black); }
+
+    /* ── CONTACT ── */
     .contact { padding: 8rem 3rem; background: var(--charcoal); display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: start; }
     .contact-info .section-title { margin-bottom: 1.5rem; }
     .contact-body { font-size: 1rem; color: var(--gray); line-height: 1.8; margin-bottom: 2.5rem; }
@@ -130,18 +151,25 @@
     .form-group textarea { resize: vertical; min-height: 120px; }
     .form-submit { background: var(--gold); color: var(--black); border: none; padding: 1.1rem 2.5rem; font-family: 'Barlow Condensed', sans-serif; font-size: 1rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; cursor: pointer; transition: background 0.2s, transform 0.2s; align-self: flex-start; }
     .form-submit:hover { background: var(--gold-light); transform: translateY(-2px); }
+
+    /* ── FOOTER ── */
     footer { background: var(--black); border-top: 1px solid rgba(201,168,76,0.1); padding: 2.5rem 3rem; display: flex; align-items: center; justify-content: space-between; }
     .footer-copy { font-size: 0.82rem; color: var(--gray); }
     .footer-tagline { font-size: 0.82rem; color: var(--gray); font-style: italic; }
+
+    /* ── ANIMATIONS ── */
     @keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
     .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
     .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* ── MOBILE (unchanged) ── */
     @media (max-width: 900px) {
       nav { padding: 1rem 1.5rem; }
       .nav-links { display: none; }
-      .hero { padding: 0 1.5rem; }
+      .hero { padding: 0 1.5rem; align-items: flex-start; padding-top: 100px; }
       .services { padding: 5rem 1.5rem; }
       .why { grid-template-columns: 1fr; padding: 5rem 1.5rem; gap: 3rem; }
+      .why-visual img { height: auto; }
       .portfolio { padding: 5rem 2rem; }
       .portfolio-grid-2 { grid-template-columns: 1fr; }
       .portfolio-grid-tall { grid-template-columns: 1fr; }
@@ -151,6 +179,54 @@
       .form-row { grid-template-columns: 1fr; }
       footer { flex-direction: column; gap: 0.8rem; text-align: center; padding: 2rem 1.5rem; }
       .hero-stats { gap: 2rem; flex-wrap: wrap; }
+    }
+
+    /* ── DESKTOP ENHANCEMENTS (1100px+) ── */
+    @media (min-width: 1100px) {
+      /* Hero: two-column layout */
+      .hero { padding: 0 5rem; }
+      .hero-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; width: 100%; position: relative; z-index: 1; }
+      .hero-inner { max-width: none; }
+      .hero-right {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        opacity: 0;
+        animation: fadeUp 0.9s ease forwards 0.5s;
+      }
+      .hero-right-img {
+        width: 100%;
+        height: 340px;
+        object-fit: cover;
+        object-position: center top;
+        display: block;
+      }
+      .hero-right-badge {
+        background: var(--steel);
+        border: 1px solid rgba(201,168,76,0.2);
+        padding: 1.5rem 2rem;
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+      }
+      .hero-right-badge-stat { text-align: center; }
+      .hero-right-badge-stat .num { font-family: 'Bebas Neue', sans-serif; font-size: 2.2rem; color: var(--gold); line-height: 1; }
+      .hero-right-badge-stat .lbl { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gray); margin-top: 0.2rem; }
+      .hero-right-badge-divider { width: 1px; background: rgba(201,168,76,0.15); align-self: stretch; }
+
+      /* Constrain section widths */
+      .services { padding: 8rem 5rem; }
+      .why { padding: 8rem 5rem 4rem; gap: 5rem; }
+      .portfolio { padding: 8rem 5rem; }
+      .contact { padding: 8rem 5rem; gap: 5rem; }
+      footer { padding: 2.5rem 5rem; }
+      nav { padding: 1.2rem 5rem; }
+    }
+
+    /* ── WIDE SCREENS (1400px+) ── */
+    @media (min-width: 1400px) {
+      .services-grid { grid-template-columns: repeat(4, 1fr); }
+      .hero-title { font-size: 9rem; }
     }
   </style>
 </head>
@@ -165,25 +241,50 @@
       <li><a href="#contact" class="nav-cta">Get a Quote</a></li>
     </ul>
   </nav>
+
   <section class="hero">
     <div class="hero-bg"></div>
     <div class="hero-accent"></div>
-    <div style="position:relative; max-width: 900px;">
-      <img src="logo.png" alt="Truecraft Contracting" style="height: 80px; width: auto; margin-bottom: 2rem; opacity: 0; animation: fadeUp 0.8s ease forwards 0.1s;" />
-      <p class="hero-eyebrow">Tri-Cities, Tennessee</p>
-      <h1 class="hero-title">Built <span class="highlight">Right.</span> Built to Last.</h1>
-      <p class="hero-tagline">Truecraft Contracting delivers handyman services, remodeling, custom carpentry, and outdoor structures with the craftsmanship your home deserves.</p>
-      <div class="hero-actions">
-        <a href="#contact" class="btn-primary">Get a Free Quote</a>
-        <a href="#services" class="btn-secondary">Our Services</a>
+    <!-- hero-layout wraps both columns on desktop; on mobile it's ignored (no grid) -->
+    <div class="hero-layout">
+      <div class="hero-inner">
+        <img src="logo.png" alt="Truecraft Contracting" style="height: 80px; width: auto; margin-bottom: 2rem; opacity: 0; animation: fadeUp 0.8s ease forwards 0.1s;" />
+        <p class="hero-eyebrow">Tri-Cities, Tennessee</p>
+        <h1 class="hero-title">Built <span class="highlight">Right.</span> Built to Last.</h1>
+        <p class="hero-tagline">Truecraft Contracting delivers handyman services, remodeling, custom carpentry, and outdoor structures with the craftsmanship your home deserves.</p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn-primary">Get a Free Quote</a>
+          <a href="#services" class="btn-secondary">Our Services</a>
+        </div>
+        <div class="hero-stats">
+          <div><div class="stat-number">100%</div><div class="stat-label">Licensed &amp; Insured</div></div>
+          <div><div class="stat-number">10+</div><div class="stat-label">Communities Served</div></div>
+          <div><div class="stat-number">0</div><div class="stat-label">Shortcuts Taken</div></div>
+        </div>
       </div>
-      <div class="hero-stats">
-        <div><div class="stat-number">100%</div><div class="stat-label">Licensed &amp; Insured</div></div>
-        <div><div class="stat-number">10+</div><div class="stat-label">Communities Served</div></div>
-        <div><div class="stat-number">0</div><div class="stat-label">Shortcuts Taken</div></div>
+      <!-- RIGHT SIDE — desktop only, hidden on mobile via CSS -->
+      <div class="hero-right">
+        <img class="hero-right-img" src="IMG_2301.jpeg" alt="Truecraft Contracting team" />
+        <div class="hero-right-badge">
+          <div class="hero-right-badge-stat">
+            <div class="num">TN</div>
+            <div class="lbl">Licensed</div>
+          </div>
+          <div class="hero-right-badge-divider"></div>
+          <div class="hero-right-badge-stat">
+            <div class="num">GL</div>
+            <div class="lbl">Insured</div>
+          </div>
+          <div class="hero-right-badge-divider"></div>
+          <div class="hero-right-badge-stat">
+            <div class="num">5★</div>
+            <div class="lbl">Rated</div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
+
   <section class="services" id="services">
     <div class="reveal">
       <div class="section-label">What We Do</div>
@@ -196,6 +297,7 @@
       <div class="service-card"><span class="service-icon">&#127794;</span><div class="service-name">Outdoor Structures</div><p class="service-desc">Decks, pergolas, fences, and more — built to handle Tennessee weather and look great doing it.</p></div>
     </div>
   </section>
+
   <section class="why" id="why">
     <div class="why-text reveal">
       <div class="section-label">Why Truecraft</div>
@@ -210,7 +312,7 @@
       </div>
     </div>
     <div class="why-visual reveal">
-      <img src="IMG_2301.jpeg" alt="The Truecraft Family" style="width:100%; object-fit:cover; object-position: center top; margin-bottom: 1.5rem;" />
+      <img src="IMG_2301.jpeg" alt="The Truecraft Family" />
       <div class="why-box">
         <div class="quote-mark">"</div>
         <p class="quote-text">Behind every project is a family that takes pride in the work.</p>
@@ -218,6 +320,7 @@
       </div>
     </div>
   </section>
+
   <section class="portfolio" id="portfolio">
     <div class="reveal">
       <div class="portfolio-section-label">Our Work</div>
@@ -233,15 +336,15 @@
     <div class="portfolio-project reveal">
       <div class="portfolio-label">Deck Build</div>
       <div class="portfolio-grid-2">
-        <div class="portfolio-img-wrap"><img src="IMG_4894.jpeg" alt="Finished deck with outdoor furniture" /></div>
-        <div class="portfolio-img-wrap"><img src="IMG_4897.jpeg" alt="Deck exterior view with stairs" /></div>
+        <div class="portfolio-img-wrap"><img src="IMG_4894.jpeg" alt="Finished deck with outdoor furniture" style="object-position: center 65%;" /></div>
+        <div class="portfolio-img-wrap"><img src="IMG_4897.jpeg" alt="Deck exterior view with stairs" style="object-position: center 60%;" /></div>
       </div>
     </div>
     <div class="portfolio-project reveal">
       <div class="portfolio-label">Custom Barn Door</div>
-      <div class="portfolio-grid-tall">
-        <div class="portfolio-img-wrap tall"><div class="before-after-tag">Before</div><img src="IMG_1289.jpeg" alt="Barn door before installation" style="object-position: center 70%;" /></div>
-        <div class="portfolio-img-wrap tall"><div class="before-after-tag after">After</div><img src="IMG_1292.jpeg" alt="Custom barn door installed" /></div>
+      <div class="portfolio-grid-2">
+        <div class="portfolio-img-wrap portrait"><div class="before-after-tag">Before</div><img src="IMG_1289.jpeg" alt="Barn door before installation" /></div>
+        <div class="portfolio-img-wrap portrait"><div class="before-after-tag after">After</div><img src="IMG_1292.jpeg" alt="Custom barn door installed" /></div>
       </div>
     </div>
     <div class="portfolio-project reveal">
@@ -259,6 +362,7 @@
       </div>
     </div>
   </section>
+
   <section class="contact" id="contact">
     <div class="contact-info reveal">
       <div class="section-label">Get In Touch</div>
@@ -288,11 +392,13 @@
       </form>
     </div>
   </section>
+
   <footer>
     <img src="logo.png" alt="Truecraft Contracting" style="height: 36px; width: auto; opacity: 0.7;" />
     <div class="footer-copy">&#169; 2025 Truecraft Contracting LLC &middot; Tri-Cities, TN &middot; <a href="mailto:info@truecrafttn.com" style="color: var(--gray); text-decoration: none;">info@truecrafttn.com</a> &middot; (423) 672-8850</div>
     <div class="footer-tagline">Built Right. Built to Last.</div>
   </footer>
+
   <script>history.scrollRestoration = "manual"; window.addEventListener("load", function() { window.scrollTo(0, 0); });</script>
   <script>
     const form = document.getElementById('quote-form');
@@ -308,6 +414,7 @@
     const observer = new IntersectionObserver((entries) => { entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } }); }, { threshold: 0.1 });
     reveals.forEach(el => observer.observe(el));
   </script>
+
   <div style="position: fixed; bottom: 0; left: 0; right: 0; z-index: 999; padding: 0.8rem 1.5rem 0.8rem; background: rgba(10,10,10,0.97); display: flex; justify-content: center;">
     <a href="tel:4236728850" style="display: flex; align-items: center; gap: 0.8rem; background: #c9a84c; color: #0a0a0a; padding: 1rem 2.5rem; font-family: 'Barlow Condensed', sans-serif; font-size: 1.1rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; text-decoration: none; width: 100%; max-width: 400px; justify-content: center; box-shadow: 0 4px 20px rgba(201,168,76,0.4);">
       &#128222; Call (423) 672-8850
