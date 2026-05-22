@@ -89,20 +89,40 @@
     footer { background: var(--black); border-top: 1px solid rgba(201,168,76,0.1); padding: 2.5rem 3rem; display: flex; align-items: center; justify-content: space-between; }
     .footer-copy { font-size: 0.82rem; color: var(--gray); }
     .footer-tagline { font-size: 0.82rem; color: var(--gray); font-style: italic; }
-    @keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
-    .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
-    .reveal.visible { opacity: 1; transform: translateY(0); }
-    @media (max-width: 900px) {
-      nav { padding: 1rem 1.5rem; }
-      .nav-links { display: none; }
-      .hero { padding: 0 1.5rem; }
-      .services { padding: 5rem 1.5rem; }
-      .why { grid-template-columns: 1fr; padding: 5rem 1.5rem; gap: 3rem; }
-      .contact { grid-template-columns: 1fr; padding: 5rem 1.5rem; gap: 3rem; }
-      .form-row { grid-template-columns: 1fr; }
-      footer { flex-direction: column; gap: 0.8rem; text-align: center; padding: 2rem 1.5rem; }
-      .hero-stats { gap: 2rem; flex-wrap: wrap; }
-    }
+
+```
+/* ── PORTFOLIO ── */
+.portfolio { padding: 8rem 3rem; background: var(--black); }
+.portfolio-project { margin-bottom: 4rem; }
+.portfolio-label { font-family: 'Barlow Condensed', sans-serif; font-size: 0.85rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; }
+.portfolio-label::before { content: ''; display: inline-block; width: 25px; height: 2px; background: var(--gold); vertical-align: middle; margin-right: 0.7rem; }
+.portfolio-grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; }
+.portfolio-img-wrap { position: relative; overflow: hidden; }
+.portfolio-img-wrap img { width: 100%; height: 280px; object-fit: cover; display: block; transition: transform 0.4s ease; }
+.portfolio-img-wrap:hover img { transform: scale(1.03); }
+.before-after-tag { position: absolute; top: 1rem; left: 1rem; background: rgba(10,10,10,0.8); color: var(--light-gray); font-family: 'Barlow Condensed', sans-serif; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; padding: 0.3rem 0.8rem; z-index: 2; }
+.before-after-tag.after { background: var(--gold); color: var(--black); }
+@media (max-width: 900px) {
+  .portfolio { padding: 5rem 1.5rem; }
+  .portfolio-grid-2 { grid-template-columns: 1fr; }
+  .portfolio-img-wrap img { height: 220px; }
+}
+@keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+.reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+@media (max-width: 900px) {
+  nav { padding: 1rem 1.5rem; }
+  .nav-links { display: none; }
+  .hero { padding: 0 1.5rem; }
+  .services { padding: 5rem 1.5rem; }
+  .why { grid-template-columns: 1fr; padding: 5rem 1.5rem; gap: 3rem; }
+  .contact { grid-template-columns: 1fr; padding: 5rem 1.5rem; gap: 3rem; }
+  .form-row { grid-template-columns: 1fr; }
+  footer { flex-direction: column; gap: 0.8rem; text-align: center; padding: 2rem 1.5rem; }
+  .hero-stats { gap: 2rem; flex-wrap: wrap; }
+}
+```
+
   </style>
 </head>
 <body>
@@ -111,6 +131,7 @@
     <ul class="nav-links">
       <li><a href="#services">Services</a></li>
       <li><a href="#why">About</a></li>
+      <li><a href="#portfolio">Work</a></li>
       <li><a href="#contact">Contact</a></li>
       <li><a href="#contact" class="nav-cta">Get a Quote</a></li>
     </ul>
@@ -168,6 +189,85 @@
       </div>
     </div>
   </section>
+  <!-- PORTFOLIO SECTION -->
+  <section class="portfolio" id="portfolio">
+    <div class="reveal">
+      <div class="section-label">Our Work</div>
+      <h2 class="section-title">Recent Projects</h2>
+    </div>
+
+```
+<!-- Interior Remodel -->
+<div class="portfolio-project reveal">
+  <div class="portfolio-label">Interior Remodel</div>
+  <div class="portfolio-grid-2">
+    <div class="portfolio-img-wrap">
+      <img src="IMG_4899.jpeg" alt="Kitchen and living room remodel" />
+    </div>
+    <div class="portfolio-img-wrap">
+      <img src="IMG_4901.jpeg" alt="Living room remodel" />
+    </div>
+  </div>
+</div>
+
+<!-- Deck Build -->
+<div class="portfolio-project reveal">
+  <div class="portfolio-label">Deck Build</div>
+  <div class="portfolio-grid-2">
+    <div class="portfolio-img-wrap">
+      <img src="IMG_4894.jpeg" alt="Finished deck with outdoor furniture" />
+    </div>
+    <div class="portfolio-img-wrap">
+      <img src="IMG_4897.jpeg" alt="Deck exterior view with stairs" />
+    </div>
+  </div>
+</div>
+
+<!-- Custom Barn Door -->
+<div class="portfolio-project reveal">
+  <div class="portfolio-label">Custom Barn Door</div>
+  <div class="portfolio-grid-2">
+    <div class="portfolio-img-wrap">
+      <div class="before-after-tag">Before</div>
+      <img src="IMG_1289.jpeg" alt="Barn door before installation" />
+    </div>
+    <div class="portfolio-img-wrap">
+      <div class="before-after-tag after">After</div>
+      <img src="IMG_1292.jpeg" alt="Custom barn door installed" />
+    </div>
+  </div>
+</div>
+
+<!-- Door Replacement -->
+<div class="portfolio-project reveal">
+  <div class="portfolio-label">Door Replacement</div>
+  <div class="portfolio-grid-2">
+    <div class="portfolio-img-wrap">
+      <div class="before-after-tag">Before</div>
+      <img src="IMG_1578.jpeg" alt="Broken door before replacement" />
+    </div>
+    <div class="portfolio-img-wrap">
+      <div class="before-after-tag after">After</div>
+      <img src="IMG_8459.jpeg" alt="New door installed" />
+    </div>
+  </div>
+</div>
+
+<!-- Accent Wall -->
+<div class="portfolio-project reveal">
+  <div class="portfolio-label">Beadboard Accent Wall</div>
+  <div class="portfolio-grid-2">
+    <div class="portfolio-img-wrap">
+      <img src="IMG_3362.jpeg" alt="Bedroom beadboard accent wall" />
+    </div>
+    <div class="portfolio-img-wrap">
+      <img src="IMG_3916.jpeg" alt="Beadboard accent wall detail" />
+    </div>
+  </div>
+</div>
+```
+
+  </section>
   <section class="contact" id="contact">
     <div class="contact-info reveal">
       <div class="section-label">Get In Touch</div>
@@ -175,7 +275,7 @@
       <p class="contact-body">Ready to get started or just have a question? Reach out and we'll get back to you fast. Free estimates on all projects.</p>
       <div class="contact-details">
         <div class="contact-item"><div class="contact-icon">📞</div><div><div class="contact-item-label">Phone</div><div class="contact-item-text">(423) 672-8850</div></div></div>
-        <div class="contact-item"><div class="contact-icon">📧</div><div><div class="contact-item-label">Email</div><div class="contact-item-text">info@truecrafttn.com</div></div></div>
+        <div class="contact-item"><div class="contact-icon">📧</div><div><div class="contact-item-label">Email</div><div class="contact-item-text">mark@truecrafttn.com</div></div></div>
         <div class="contact-item"><div class="contact-icon">📍</div><div><div class="contact-item-label">Service Area</div><div class="contact-item-text">Tri-Cities, TN — Johnson City · Kingsport · Bristol</div></div></div>
       </div>
     </div>
@@ -199,7 +299,7 @@
   </section>
   <footer>
     <img src="logo.png" alt="Truecraft Contracting" style="height: 36px; width: auto;  opacity: 0.7;" />
-    <div class="footer-copy">© 2025 Truecraft Contracting LLC · Tri-Cities, TN · <a href="mailto:info@truecrafttn.com" style="color: var(--gray); text-decoration: none;">info@truecrafttn.com</a> · (423) 672-8850</div>
+    <div class="footer-copy">© 2025 Truecraft Contracting LLC · Tri-Cities, TN · <a href="mailto:mark@truecrafttn.com" style="color: var(--gray); text-decoration: none;">mark@truecrafttn.com</a> · (423) 672-8850</div>
     <div class="footer-tagline">Built Right. Built to Last.</div>
   </footer>
   <script>
