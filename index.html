@@ -63,7 +63,7 @@
     .nav-cta:hover { background: var(--gold-light) !important; }
 
     /* ── HERO ── */
-    .hero { min-height: 100vh; display: flex; align-items: center; padding: 200px 3rem 3rem; position: relative; overflow: hidden; }
+    .hero { min-height: 100vh; display: flex; align-items: center; padding: 120px 3rem 3rem; position: relative; overflow: hidden; }
     .hero-bg { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(201,168,76,0.06) 0%, transparent 50%); }
     .hero-accent { position: absolute; right: -100px; top: 50%; transform: translateY(-50%); width: 600px; height: 600px; border: 1px solid rgba(201,168,76,0.08); border-radius: 50%; pointer-events: none; }
     .hero-inner { position: relative; width: 100%; max-width: 680px; }
@@ -205,7 +205,7 @@
 
       .why { grid-template-columns: 1fr 1fr; gap: 5rem; align-items: stretch; }
       .why-visual { display: flex; }
-      .why-visual img { height: 100%; min-height: 550px; }
+      .why-visual img { height: 560px; min-height: unset; object-fit: cover; object-position: center 20%; }
 
       /* Constrain section widths */
       .services { padding: 8rem 5rem; }
@@ -214,7 +214,7 @@
       .contact { padding: 8rem 5rem; gap: 5rem; }
       footer { padding: 2.5rem 5rem; }
       nav { padding: 1.2rem 5rem; }
-      .hero { padding: 200px 5rem 3rem; }
+      .hero { padding: 120px 5rem 3rem; }
     }
 
     /* ── WIDE SCREENS (1400px+) ── */
