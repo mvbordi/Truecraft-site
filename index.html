@@ -165,6 +165,7 @@
 
     /* ── MOBILE (unchanged) ── */
     @media (max-width: 900px) {
+      .hero-logo { display: none; }
       nav { padding: 1rem 1.5rem; }
       .nav-links { display: none; }
       .hero { padding: 0 1.5rem; align-items: flex-start; padding-top: 100px; }
@@ -235,7 +236,7 @@
     <div class="hero-bg"></div>
     <div class="hero-accent"></div>
     <div style="position:relative; z-index:1; width:100%;">
-      <img src="logo.png" alt="Truecraft Contracting" style="height: 80px; width: auto; margin-bottom: 1rem; opacity: 0; animation: fadeUp 0.8s ease forwards 0.1s;" />
+      <img class="hero-logo" src="logo.png" alt="Truecraft Contracting" style="height: 80px; width: auto; margin-bottom: 1rem; opacity: 0; animation: fadeUp 0.8s ease forwards 0.1s;" />
       <p class="hero-eyebrow">Tri-Cities, Tennessee</p>
       <div class="hero-layout">
         <div class="hero-inner">
