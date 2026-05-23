@@ -186,35 +186,22 @@
     @media (min-width: 1100px) {
       /* Hero: two-column layout */
       .hero { padding: 0 5rem; }
-      .hero-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; width: 100%; position: relative; z-index: 1; }
+      .hero-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: flex-start; width: 100%; position: relative; z-index: 1; }
       .hero-inner { max-width: none; }
       .hero-right {
         display: flex;
         flex-direction: column;
-        gap: 0;
         opacity: 0;
         animation: fadeUp 0.9s ease forwards 0.5s;
       }
       .hero-right-img {
         width: 100%;
-        height: 260px;
+        height: 100%;
+        min-height: 400px;
         object-fit: cover;
-        object-position: center 50%;
+        object-position: center 40%;
         display: block;
       }
-      .hero-right-badge {
-        background: var(--steel);
-        border: 1px solid rgba(201,168,76,0.2);
-        padding: 1.5rem 1rem;
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        flex-shrink: 0;
-      }
-      .hero-right-badge-stat { text-align: center; flex: 1; }
-      .hero-right-badge-stat .num { font-family: 'Bebas Neue', sans-serif; font-size: 2.2rem; color: var(--gold); line-height: 1; text-align: center; }
-      .hero-right-badge-stat .lbl { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gray); margin-top: 0.2rem; text-align: center; }
-      .hero-right-badge-divider { width: 1px; background: rgba(201,168,76,0.15); align-self: stretch; }
 
       /* Constrain section widths */
       .services { padding: 8rem 5rem; }
@@ -247,12 +234,11 @@
   <section class="hero">
     <div class="hero-bg"></div>
     <div class="hero-accent"></div>
-    <!-- hero layout: logo above grid, then two columns -->
     <div style="position:relative; z-index:1; width:100%;">
-      <img src="logo.png" alt="Truecraft Contracting" style="height: 80px; width: auto; margin-bottom: 1.5rem; opacity: 0; animation: fadeUp 0.8s ease forwards 0.1s;" />
+      <img src="logo.png" alt="Truecraft Contracting" style="height: 80px; width: auto; margin-bottom: 1rem; opacity: 0; animation: fadeUp 0.8s ease forwards 0.1s;" />
+      <p class="hero-eyebrow">Tri-Cities, Tennessee</p>
       <div class="hero-layout">
         <div class="hero-inner">
-          <p class="hero-eyebrow">Tri-Cities, Tennessee</p>
           <h1 class="hero-title">Built <span class="highlight">Right.</span> Built to Last.</h1>
           <p class="hero-tagline">Truecraft Contracting delivers handyman services, remodeling, custom carpentry, and outdoor structures with the craftsmanship your home deserves.</p>
           <div class="hero-actions">
@@ -267,13 +253,6 @@
         </div>
         <div class="hero-right">
           <img class="hero-right-img" src="IMG_4896.jpeg" alt="Completed home remodel by Truecraft Contracting" style="object-position: center 40%;" />
-          <div class="hero-right-badge">
-            <div class="hero-right-badge-stat"><div class="num">TN</div><div class="lbl">Licensed</div></div>
-            <div class="hero-right-badge-divider"></div>
-            <div class="hero-right-badge-stat"><div class="num">GL</div><div class="lbl">Insured</div></div>
-            <div class="hero-right-badge-divider"></div>
-            <div class="hero-right-badge-stat"><div class="num">5★</div><div class="lbl">Rated</div></div>
-          </div>
         </div>
       </div>
     </div>
